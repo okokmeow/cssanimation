@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@600&display=swap');
+
+#text1
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', serif;
+}
+
+body
+{
+	background: #2b2b2b;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 20vh;
+}
+
+h2
+{	
+	position: relative;
+	margin: 50px;
+	font-size: 100px;
+	color: #2b2b2b;
+	-webkit-text-stroke: 0.1vw #304d39;
+	text-transform: uppercase;
+}
+
+h2::before
+{
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	color: #01fe87;
+	-webkit-text-stroke: 0vw #304d39;
+	border-right: 2px solid #91e3ab;
+	overflow: hidden;
+	animation: animate 8s linear infinite;
+}
+
+@keyframes animate
+{
+	0%,10%,100%
+	{
+		width: 0%;
+	}
+	70%,90%
+	{
+		width: 100%;
+	}
+}
+
+#text2
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+	font-family: 'Noto Serif Display', serif;
+
+	font-size: 100px;
+	color: #333;
+}
+
+div span
+{
+	animation: animate 1s linear infinite;
+}
+
+div span:nth-child(1)
+{
+	animation-delay: 0s;
+}
+
+div span:nth-child(2)
+{
+	animation-delay: 0.2s;
+}
+
+div span:nth-child(3)
+{
+	animation-delay: 0.4s;
+}
+
+div span:nth-child(4)
+{
+	animation-delay: 0.6s;
+}
+
+div span:nth-child(5)
+{
+	animation-delay: 0.8s;
+}
+
+@keyframes animate
+{
+	0%,80%
+	{
+		color: #333;
+		text-shadow: none;
+	}
+	100% 
+	{
+		color: #fff;
+		text-shadow:0 0 10px #fff
+					0 0 20px #fff
+					0 0 40px #fff
+					0 0 80px #fff
+					0 0 120px #fff
+					0 0 160px #fff;
+	}
+}
+
+.box
+{
+	display: flex;
+	padding: 60px;
+}
+
+.box .inner 
+{
+	width: 400px;
+	height: 180px;
+	line-height: 200px;
+	font-size: 80px;
+	font-family: sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box .inner:first-child 
+{
+	background-color: #c0a4de;
+	color: #fff;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child
+{
+	background-color: #b28dd9;
+	color: #756882;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span
+{
+	position: absolute;
+	animation: marquee 4s linear infinite;
+}
+
+.box .inner:first-child span 
+{
+	animation-delay: 2s;
+	left: -100%;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
